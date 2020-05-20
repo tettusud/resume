@@ -55,7 +55,9 @@ code {
     }
 }
 
-
+.gitignore{
+    width:400px;
+}
 
 .side-hustle {
     width: 80%;
@@ -100,6 +102,10 @@ $themes: (
 
 @each $theme, $map in $themes {
     .#{$theme} {
+        width: 100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
         .block {
             color: map-get($map, "primary-text");
             margin: 30px;
