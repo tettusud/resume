@@ -1,0 +1,14 @@
+@import "scss/light.scss";
+@import "scss/dark.scss";
+
+
+$themes: (
+  theme1: (color: red),
+  theme2: (color: orange),
+);
+
+@each $theme, $map in $themes {
+    .#{$theme} {
+      color: map-get($map, color);
+    }
+  }

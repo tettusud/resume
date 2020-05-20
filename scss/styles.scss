@@ -1,0 +1,50 @@
+@import "scss/variables";
+// @import "scss/dark";
+// @import "scss/light";
+// @import "scss/blocks";
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+$font-size: 16px;   
+
+body {
+    background-color: #fff;
+    font-size: $font-size;
+    color: #3d3d3d;
+}  
+code {
+    white-space: pre-line;
+    font-family: 'Anonymous Pro', monospace;  
+    line-height: 10px;
+}
+.me   {
+    width:400px;
+}
+
+
+$themes: (
+  light:(
+    "bg-primary":#f9f9f9,
+    "bg-secondary":#cacaca,
+    "border":#c9c9c9,
+    "hl1":#444,
+    "hl2":#666666,
+    "primary-text":#777777
+  ),
+  theme-dark:(
+    "bg-primary":#111111,
+    "bg-secondary":#333,
+    "border":#444,
+    "hl1":#ffeb3b,
+    "hl2":#fff176,
+    "primary-text":#cacaca
+  )
+);
+
+@each $theme, $map in $themes {
+    .#{$theme} {
+      color: map-get($map, color);
+      .box{
+          background-color:map-get($map, bg);
+      }
+    }
+  }

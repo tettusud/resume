@@ -1,0 +1,19 @@
+@import "scss/variables.scss";
+.block {
+    .container {
+        border-bottom-left-radius: map-get($dimensions,"border-radius" );
+        border-bottom-right-radius:  map-get($dimensions,"border-radius" );
+        border:1px solid ;
+        padding:20px 10px;
+    }
+    .header{
+        font-size:16px;
+        font-weight:500;
+        .title{
+            display:inline-block;
+            padding:7px 14px;
+            border-top-left-radius: map-get($dimensions,"border-radius" );
+            border-top-right-radius:  map-get($dimensions,"border-radius" );
+        }
+    }
+}
