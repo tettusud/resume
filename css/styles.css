@@ -1,24 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@font-face {
+  font-family: Gochi;
+  src: url("../fonts/Gochi/Gochi.ttf"); }
+
 body {
   background-color: #fff;
   font-size: 16px;
-  color: #3d3d3d; }
+  color: #3d3d3d;
+  font-family: 'Anonymous Pro', monospace; }
 
 code {
-  white-space: pre-line;
   line-height: 10px; }
+  code div {
+    margin: 15px 5px; }
 
 .me {
   width: 400px; }
 
-.skills {
-  width: 500px; }
+.skills-roles {
+  position: relative; }
+  .skills-roles .skills {
+    width: 400px;
+    min-height: 200px;
+    font-family: Gochi;
+    font-size: 24px;
+    transform: rotate(8deg);
+    position: absolute;
+    right: 50px;
+    top: 100px;
+    background-color: #feff9c; }
+    .skills-roles .skills .content {
+      padding: 20px; }
+    .skills-roles .skills .header {
+      background-color: #fff740;
+      padding: 10px;
+      text-align: center; }
+  .skills-roles .roles {
+    width: 96%; }
+    .skills-roles .roles code {
+      line-height: 18px; }
+
+.side-hustle {
+  width: 80%;
+  transform: rotate(-5deg); }
 
 .tab {
   text-indent: 36px; }
 
 .light .block {
   color: #777777;
-  margin: 30px; }
+  margin: 30px;
+  font-family: 'Anonymous Pro', monospace; }
   .light .block .container {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -28,6 +60,9 @@ code {
     border-color: #ccc;
     color: #777777;
     background-color: #f9f9f9; }
+    .light .block .container code {
+      font-family: 'Anonymous Pro', monospace;
+      font-size: 18px; }
   .light .block .header {
     font-size: 16px;
     font-weight: 500;
@@ -35,6 +70,7 @@ code {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px; }
     .light .block .header .title {
+      color: #ffffff;
       display: inline-block;
       padding: 7px 14px;
       border-top-left-radius: 4px;
@@ -56,7 +92,8 @@ code {
 
 .dark .block {
   color: #cacaca;
-  margin: 30px; }
+  margin: 30px;
+  font-family: 'Anonymous Pro', monospace; }
   .dark .block .container {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -66,6 +103,9 @@ code {
     border-color: #444;
     color: #cacaca;
     background-color: #111111; }
+    .dark .block .container code {
+      font-family: 'Anonymous Pro', monospace;
+      font-size: 18px; }
   .dark .block .header {
     font-size: 16px;
     font-weight: 500;
