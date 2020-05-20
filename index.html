@@ -1,8 +1,9 @@
 <html>
-
 <head>
     <title>Sudharsan Tettu</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <!--load all styles -->
 </head>
 
 <body>
@@ -11,7 +12,7 @@
     <div class="light">
         <div class="block me">
             <div class="header">
-                 <span class="title">me.props</span>
+                <span class="title">me.txt</span>
             </div>
             <div class="container">
                 <code>
@@ -21,35 +22,52 @@
                     <div>
                         <span class="hl2"><span class="hl1">me.</span>tel</span>=(+65)8268 5194
                     </div>
-                   <div>
-                    <span class="hl2"><span class="hl1">me.</span>mail</span>=sudharsan_tk@yahoo.co.in
-                   </div>
+                    <div>
+                        <span class="hl2"><span class="hl1">me.</span>mail</span>=sudharsan_tk@yahoo.co.in
+                    </div>
                 </code>
             </div>
         </div>
     </div>
 
     <div class="dark">
-        <div class="block me">
+        <div class="block skills">
             <div class="header">
-                 <span class="title">me.props</span>
+                <span class="title">Dockerfile</span>
             </div>
             <div class="container">
                 <code>
+                    <div class="hl4"> <i class="fas fa-hashtag"></i>&nbsp;Roles</div>
                     <div>
-                        <span class="hl2"><span class="hl1">me.</span>name</span>=Sudharsan
+                        <div>
+                            <span class="hl3">FROM</span> <span class="hl1">apple</span>:latest <span
+                                class="hl3">as</span> developer
+                        </div>
+                        <div> <span class="hl3"> RUN </span> curl get https://requirements.txt && \ </div>
+                        <div class="tab">web_development.sh && \</div>
+                        <div class="tab"> application_setup_on_aws && \</div>
+                        <div class="tab">maitain_and_publish_ng_library.sh </div>
+                        <div><span class="hl3"> ADD</span> documentation.md . </div>
                     </div>
                     <div>
-                        <span class="hl2"><span class="hl1">me.</span>tel</span>=(+65)8268 5194
+                        <div> <span class="hl3">FROM</span> <span class="hl1">barclays</span>:2010.2018 <span
+                                class="hl3">as</span> team_lead </div>
+                        <div> <span class="hl3"> RUN </span> curl get https://requirements.txt && \ </div>
+                        <div class="tab">architect_and_lead_team.sh && \</div>
+                        <div class="tab">micro_services_dev.sh && \</div>
+                        <div class="tab">devops_ci_cd.sh h</div>
                     </div>
-                   <div>
-                    <span class="hl2"><span class="hl1">me.</span>mail</span>=sudharsan_tk@yahoo.co.in
-                   </div>
+                    <div>
+                        <div> <span class="hl3">FROM</span> <span class="hl1">verizon</span>:2005.2009 <span
+                                class="hl3">as</span> sr_dev </div>
+                        <div> <span class="hl3"> RUN </span> make wire_frames && \ </div>
+                        <div class="tab">web_development.sh && \</div>
+                        <div> <span class="hl3"> ADD</span> documentation.md . </div>
+                    </div>
+                    <div><span class="hl3">CMD</span> ["npm","run","dev"]</div>
                 </code>
             </div>
         </div>
     </div>
-    
 </body>
-
 </html>

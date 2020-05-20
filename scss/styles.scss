@@ -1,8 +1,4 @@
 @import "scss/variables";
-// @import "scss/dark";
-// @import "scss/light";
-// @import "scss/blocks";
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 $font-size: 16px;   
 
@@ -13,38 +9,89 @@ body {
 }  
 code {
     white-space: pre-line;
-    font-family: 'Anonymous Pro', monospace;  
     line-height: 10px;
 }
 .me   {
     width:400px;
 }
+.skills{
+    width:500px;
+}
 
+.tab{
+    text-indent: 36px;
+}
+
+@mixin top-radius(){
+    border-top-left-radius: map-get($dimensions,"border-radius" );
+    border-top-right-radius:  map-get($dimensions,"border-radius" );
+}
 
 $themes: (
   light:(
     "bg-primary":#f9f9f9,
-    "bg-secondary":#cacaca,
-    "border":#c9c9c9,
+    "bg-secondary":#aaa,
+    "bg-tertiary":#ccc,
+    "border":#ccc,
     "hl1":#444,
     "hl2":#666666,
+    "hl3": #aaaaaa,
+    "hl4": #e9e9e9,
     "primary-text":#777777
   ),
-  theme-dark:(
+ dark:(
     "bg-primary":#111111,
-    "bg-secondary":#333,
+    "bg-secondary":#222,
+    "bg-tertiary":#444,
     "border":#444,
-    "hl1":#ffeb3b,
-    "hl2":#fff176,
+    "hl1":#fff176,
+    "hl2":#fff9c4,
+    "hl3":#039be5,
+    "hl4": #9a9a9a,
     "primary-text":#cacaca
   )
 );
 
 @each $theme, $map in $themes {
     .#{$theme} {
-      color: map-get($map, color);
-      .box{
-          background-color:map-get($map, bg);
-      }
+        .block {
+            color:map-get($map,"primary-text" );
+            margin:30px;
+            .container {
+                border-bottom-left-radius: map-get($dimensions,"border-radius" );
+                border-bottom-right-radius:  map-get($dimensions,"border-radius" );
+                border:1px solid ;
+                border-top:0px;
+                padding:20px 10px;
+                border-color : map-get($map,"border" );
+                color:map-get($map,"primary-text" );
+                background-color:map-get($map,"bg-primary" );
+            }
+            .header{
+                font-size:16px;
+                font-weight:500;
+                background-color: map-get($map,"bg-tertiary" );
+                @include top-radius();
+                .title{
+                    display:inline-block;
+                    padding:7px 14px;
+                    @include top-radius();
+                    background-color: map-get($map,"bg-secondary" );
+                    border-top-right-radius: 0;
+                }
+            }
+        }
+        .hl1{
+            color:map-get($map,"hl1" );
+        }
+        .hl2{
+            color:map-get($map,"hl2" );
+        }
+        .hl3{
+            color:map-get($map,"hl3" );
+        }
+        .hl4{
+            color:map-get($map,"hl4" );
+        }
     }
   }
